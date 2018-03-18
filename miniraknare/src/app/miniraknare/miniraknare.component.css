@@ -1,24 +1,17 @@
-.enter-stage-south {
-    -moz-animation-duration: 3s;
-    -webkit-animation-duration: 3s;
-    -moz-animation-name: slide-up;
-    -webkit-animation-name: slide-up;
+button, label{
+    horizontal-align: center;    
   }
-  
-  @-moz-keyframes slide-up {
-    from {
-      margin-top: 100%;
-    }
-    to {
-      margin-top: 0%;
-    }
+   
+  label {
+    font-size: 36;
   }
-  
-  @-webkit-keyframes slide-up {
-    from {
-      margin-top: 100%;
-    }
-    to {
-      margin-top: 0%;
-    }
+   
+  label.result {
+    font-size: 42;
+    horizontal-align: left;
+  }
+   
+  button {
+    font-size: 36;
+    width: 100%;
   }
