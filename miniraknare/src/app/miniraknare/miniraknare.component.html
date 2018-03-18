@@ -1,34 +1,37 @@
-<div class="content">
-  <div class="row">
 
-    <br>
-    <br>
 
-<h1> Miniräknare</h1>
-    <GridLayout columns="*, *, *, *" rows="auto, auto, *, *, *, *, *" >
-        <Label class="result" text="RESULT" colSpan="4"></Label>
-        <Label text="OPERATON" row="1" colSpan="4"></Label>
-        <Button row="2" col="0" text="7"></Button>
-        <Button row="2" col="1" text="8"></Button>
-        <Button row="2" col="2" text="9"></Button>
-        <Button row="2" col="4" text="+"></Button>
-        <Button row="3" col="0" text="4"></Button>
-        <Button row="3" col="1" text="5"></Button>
-        <Button row="3" col="2" text="6"></Button>
-        <Button row="3" col="3" text="6"></Button>
-        <Button row="3" col="4" text="-"></Button>
-        <Button row="4" col="0" text="1"></Button>
-        <Button row="4" col="1" text="2"></Button>
-        <Button row="4" col="2" text="3"></Button>
-        <Button row="4" col="3" text="X"></Button>
-        <Button row="5" col="0" text="0"></Button>
-        <Button row="5" col="1" text="."></Button>
-        <Button row="5" col="2" text="("></Button>
-        <Button row="5" col="3" text=")"></Button>
-        <Button row="6" col="0" text="UNDO"></Button>
-        <Button row="6" col="1" text="CLEAR"></Button>
-        <Button row="6" col="2" colSpan="2" text="="></Button>
-      </GridLayout>
+      <form name="calculator">
+         <table>
+            <tr>
+               <td colspan="4">
+                  <input type="text" name="display" id="display" disabled>
+               </td>
+            </tr>
+            <tr>
+               <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+               <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+               <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+               <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+               <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+               <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+               <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+               <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+               <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+               <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+            </tr>
+            <tr>
+               <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+               <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+               <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+               <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+            </tr>
+         </table>
+      </form>
+ 
 
-  </div>
-</div>
